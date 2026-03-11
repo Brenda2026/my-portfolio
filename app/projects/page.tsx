@@ -16,19 +16,19 @@ function Card({
   href: string;
 }) {
   return (
-    <Link href={href} className="block group">
-      <div className="bg-[#c8d8d4] rounded-2xl p-6 flex flex-col gap-4 group-hover:bg-[#b8ccc8] transition-all duration-200 cursor-pointer group-hover:shadow-md">
+    <Link href={href} className="block group h-full">
+      <div className="bg-[#c8d8d4] rounded-2xl p-6 flex flex-col gap-4 h-full group-hover:bg-[#b8ccc8] transition-all duration-200 cursor-pointer group-hover:shadow-md">
         <div className="flex items-center gap-3">
           <Image
             src={icon}
             alt={title}
-            width={140}
-            height={140}
+            width={160}
+            height={160}
             className="w-20 h-20 object-contain"
           />
           <div>
-            <h3 className="text-2xl font-bold text-gray-1200">{title}</h3>
-            <p className="text-lg font-medium text-gray-1000">{subtitle}</p>
+            <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
+            <p className="text-lg font-medium text-gray-700">{subtitle}</p>
           </div>
         </div>
         <p className="flex-1 space-y-6 text-gray-800 text-lg leading-relaxed">

@@ -26,7 +26,7 @@ export const projects = [
     slug: "powderprep",
     name: "PowderPrep",
     tagline: "Trip planning app for skiers",
-    icon: "/logos/PowderPrep.png",
+    icon: "/logos/Powderprep.png",
     summary:
       "Personalized packing recommendations using real-time mountain weather data.",
     description: "Full description of PowderPrep...",

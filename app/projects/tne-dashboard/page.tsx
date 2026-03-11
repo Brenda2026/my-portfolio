@@ -1,5 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
+import ProjectNav from "@/components/ProjectsNav";
+import ImageModal from "@/components/ImageModal";
 
 export default function TNEDashboardPage() {
   return (
@@ -44,7 +45,7 @@ export default function TNEDashboardPage() {
           </p>
           <figure className="space-y-2 pt-2">
             <div className="relative h-80">
-              <Image
+              <ImageModal
                 src="/tne/product-box.png"
                 alt="TNE.ai product overview"
                 fill
@@ -78,7 +79,7 @@ export default function TNEDashboardPage() {
           </p>
           <figure className="space-y-2">
             <div className="relative h-96">
-              <Image
+              <ImageModal
                 src="/tne/four-panel.png"
                 alt="TNE.ai four panel storyboard"
                 fill
@@ -113,7 +114,7 @@ export default function TNEDashboardPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
             <figure className="space-y-2">
               <div className="relative h-80">
-                <Image
+                <ImageModal
                   src="/tne/multi-team.png"
                   alt="Multi-team development structure"
                   fill
@@ -127,7 +128,7 @@ export default function TNEDashboardPage() {
             </figure>
             <figure className="space-y-2">
               <div className="relative h-80">
-                <Image
+                <ImageModal
                   src="/tne/project-status.png"
                   alt="Project status artifacts"
                   fill
@@ -162,7 +163,7 @@ export default function TNEDashboardPage() {
           </p>
           <figure className="space-y-2 pt-2">
             <div className="relative h-96">
-              <Image
+              <ImageModal
                 src="/tne/dashboard-overview.png"
                 alt="TNE.ai dashboard overview"
                 fill
@@ -198,7 +199,7 @@ export default function TNEDashboardPage() {
           </div>
           <figure className="space-y-2 pt-2">
             <div className="relative h-80">
-              <Image
+              <ImageModal
                 src="/tne/final-dashboard.png"
                 alt="TNE.ai final dashboard"
                 fill
@@ -244,7 +245,7 @@ export default function TNEDashboardPage() {
           </div>
           <figure className="space-y-2 pt-2">
             <div className="relative h-80">
-              <Image
+              <ImageModal
                 src="/tne/final-tribe-slice.png"
                 alt="Final tribe slice"
                 fill
@@ -258,6 +259,7 @@ export default function TNEDashboardPage() {
           </figure>
         </section>
       </div>
+      <ProjectNav current="/projects/tne-dashboard" />
     </main>
   );
 }

@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
+import ProjectNav from "@/components/ProjectsNav";
+import ImageModal from "@/components/ImageModal";
 export default function LaTeXOCRPage() {
   return (
     <main className="min-h-screen bg-[#dce8e4] px-8 md:px-16 lg:px-24 py-16 font-sans">
@@ -48,7 +49,7 @@ export default function LaTeXOCRPage() {
           </p>
           <figure className="space-y-2 pt-2">
             <div className="relative h-80">
-              <Image
+              <ImageModal
                 src="/latex/overview.png"
                 alt="Math Notes to LaTeX upload interface"
                 fill
@@ -143,7 +144,7 @@ export default function LaTeXOCRPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
             <figure className="space-y-2">
               <div className="relative h-80">
-                <Image
+                <ImageModal
                   src="/latex/workflow-1.png"
                   alt="Upload and LaTeX output panel"
                   fill
@@ -157,7 +158,7 @@ export default function LaTeXOCRPage() {
             </figure>
             <figure className="space-y-2">
               <div className="relative h-80">
-                <Image
+                <ImageModal
                   src="/latex/workflow-2.png"
                   alt="Converting state"
                   fill
@@ -225,7 +226,7 @@ export default function LaTeXOCRPage() {
           </div>
           <figure className="space-y-2 pt-2">
             <div className="relative h-80">
-              <Image
+              <ImageModal
                 src="/latex/pipeline-2.png"
                 alt="LaTeX output result"
                 fill
@@ -310,7 +311,7 @@ export default function LaTeXOCRPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
             <figure className="space-y-2">
               <div className="relative h-80">
-                <Image
+                <ImageModal
                   src="/latex/final-2.png"
                   alt="Math Notes to LaTeX interface"
                   fill
@@ -324,7 +325,7 @@ export default function LaTeXOCRPage() {
             </figure>
             <figure className="space-y-2">
               <div className="relative h-80">
-                <Image
+                <ImageModal
                   src="/latex/final-1.png"
                   alt="Document and video summarizer"
                   fill
@@ -379,6 +380,7 @@ export default function LaTeXOCRPage() {
           </div>
         </section>
       </div>
+      <ProjectNav current="/projects/latex-ocr" />
     </main>
   );
 }

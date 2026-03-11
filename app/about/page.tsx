@@ -40,7 +40,7 @@ export default function AboutPage() {
           {/* Photo */}
           <div className="w-full md:w-72 lg:w-80 shrink-0">
             <Image
-              src="/about.jpg"
+              src="/about.JPG"
               alt="Brenda Mutai"
               width={320}
               height={400}

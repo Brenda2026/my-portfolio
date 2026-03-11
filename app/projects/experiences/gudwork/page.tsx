@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ProjectNav from "@/components/ProjectsNav";
 
 export default function GudworkPage() {
   return (
@@ -129,6 +130,7 @@ export default function GudworkPage() {
           </div>
         </section>
       </div>
+      <ProjectNav current="/projects/experiences/gudwork" />
     </main>
   );
 }

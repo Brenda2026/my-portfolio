@@ -1,5 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
+import ProjectNav from "@/components/ProjectsNav";
+import ImageModal from "@/components/ImageModal";
 
 export default function PowderPrepPage() {
   return (
@@ -48,6 +49,20 @@ export default function PowderPrepPage() {
             trip context could be translated into actionable decisions through
             software.
           </p>
+          <figure className="space-y-2">
+            <div className="relative h-72">
+              <ImageModal
+                src="/powderprep/final-1.png"
+                alt="PowderPrep home screen"
+                fill
+                className="rounded-2xl object-contain"
+              />
+            </div>
+            <figcaption className="text-xs text-gray-500 text-center">
+              Home screen showing recently viewed resorts and trip planning
+              entry point
+            </figcaption>
+          </figure>
         </section>
 
         {/*MY ROLE*/}
@@ -57,7 +72,7 @@ export default function PowderPrepPage() {
             <p className="text-gray-800 leading-relaxed">
               Software Engineering + System Design
             </p>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside text-gray-800">
               <li>Developed wardrobe inventory workflows</li>
               <li>Integrated real-time resort weather APIs</li>
               <li>Implemented rule-based packing report generation</li>
@@ -76,7 +91,7 @@ export default function PowderPrepPage() {
             under uncertainty. Early storyboarding sessions revealed that
             existing packing lists failed to account for two key realities:
           </p>
-          <ul className="list-disc list-inside">
+          <ul className="list-disc list-inside text-gray-800">
             <li>
               Dynamic weather conditions that could change rapidly and
               unpredictably.
@@ -93,7 +108,7 @@ export default function PowderPrepPage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
             <figure className="space-y-2">
-              <Image
+              <ImageModal
                 src="/powderprep/storyboard-1.png"
                 alt="User storyboard 1"
                 width={500}
@@ -106,7 +121,7 @@ export default function PowderPrepPage() {
               </figcaption>
             </figure>
             <figure className="space-y-2">
-              <Image
+              <ImageModal
                 src="/powderprep/storyboard-2.png"
                 alt="User storyboard 2"
                 width={500}
@@ -148,14 +163,13 @@ export default function PowderPrepPage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
             <figure className="space-y-2">
-              <div className="relative h-80">
-                <Image
-                  src="/powderprep/early-prototype.png"
-                  alt="Demo script"
-                  fill
-                  className="rounded-2xl object-contain"
-                />
-              </div>
+              <ImageModal
+                src="/powderprep/early-prototype.png"
+                alt="Demo script"
+                width={500}
+                height={500}
+                className="rounded-2xl object-cover w-full"
+              />
               <figcaption className="text-xs text-gray-500 text-center">
                 Demo script outlining early prototype features and user roles
               </figcaption>
@@ -163,7 +177,7 @@ export default function PowderPrepPage() {
 
             <figure className="space-y-2">
               <div className="relative h-80">
-                <Image
+                <ImageModal
                   src="/powderprep/early-prototype-1.png"
                   alt="Early prototype UI"
                   fill
@@ -213,7 +227,7 @@ export default function PowderPrepPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
             <figure className="space-y-2">
               <div className="relative h-80">
-                <Image
+                <ImageModal
                   src="/powderprep/iteration.png"
                   alt="Demo script"
                   fill
@@ -228,7 +242,7 @@ export default function PowderPrepPage() {
 
             <figure className="space-y-2">
               <div className="relative h-80">
-                <Image
+                <ImageModal
                   src="/powderprep/iteration-2.png"
                   alt="Early prototype UI"
                   fill
@@ -277,7 +291,7 @@ export default function PowderPrepPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
             <figure className="space-y-2">
               <div className="relative h-80">
-                <Image
+                <ImageModal
                   src="/powderprep/task-scenario.png"
                   alt="User testing task scenario"
                   fill
@@ -292,7 +306,7 @@ export default function PowderPrepPage() {
 
             <figure className="space-y-2">
               <div className="relative h-80">
-                <Image
+                <ImageModal
                   src="/powderprep/pre-test-survey.png"
                   alt="Pre-test survey questions"
                   fill
@@ -331,7 +345,7 @@ export default function PowderPrepPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
             <figure className="space-y-2">
               <div className="relative h-72">
-                <Image
+                <ImageModal
                   src="/powderprep/final-1.png"
                   alt="PowderPrep home screen"
                   fill
@@ -345,7 +359,7 @@ export default function PowderPrepPage() {
             </figure>
             <figure className="space-y-2">
               <div className="relative h-72">
-                <Image
+                <ImageModal
                   src="/powderprep/final-2.png"
                   alt="PowderPrep wardrobe screen"
                   fill
@@ -397,6 +411,7 @@ export default function PowderPrepPage() {
           </div>
         </section>
       </div>
+      <ProjectNav current="/projects/powderprep" />
     </main>
   );
 }

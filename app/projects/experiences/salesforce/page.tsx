@@ -1,29 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-
-// const takeaways = [
-//   {
-//     bold: "Designed and built an LLM-powered debugging agent",
-//     rest: " to accelerate root-cause analysis and fix cycles for production issues.",
-//   },
-//   {
-//     bold: "Developed a custom MCP tool",
-//     rest: " that accepts a stack trace ID and automatically retrieves related metadata, source files, and file ownership mappings.",
-//   },
-//   {
-//     bold: "Generated structured debugging reports",
-//     rest: " clearly outlining exception details, probable root causes, impacted files, and remediation strategies.",
-//   },
-//   {
-//     bold: "Reduced debugging and resolution cycle time by ~9%",
-//     rest: " by auto-suggesting short-term code fixes in a review-ready format.",
-//   },
-//   {
-//     bold: "Collaborated closely with engineers and mentors",
-//     rest: " to iterate on tooling design and align with existing developer workflows.",
-//   },
-// ];
-
+import ProjectNav from "@/components/ProjectsNav";
+import ImageModal from "@/components/ImageModal";
 export default function SalesforcePage() {
   return (
     <main className="min-h-screen bg-[#dce8e4] px-8 md:px-16 lg:px-24 py-16 font-sans">
@@ -125,14 +103,14 @@ export default function SalesforcePage() {
           {/* ← end of LEFT column */}
           {/* RIGHT column — photos */}
           <div className="flex flex-col gap-4 w-full md:w-64 shrink-0">
-            <Image
+            <ImageModal
               src="/salesforce-1.jpg"
               alt="Photo 1"
               width={256}
               height={180}
               className="rounded-2xl object-cover w-full"
             />
-            <Image
+            <ImageModal
               src="/salesforce-2.jpg"
               alt="Photo 2"
               width={256}
@@ -143,6 +121,7 @@ export default function SalesforcePage() {
         </div>{" "}
         {/* ← end of flex row */}
       </div>
+      <ProjectNav current="/projects/experiences/salesforce" />
     </main>
   );
 }

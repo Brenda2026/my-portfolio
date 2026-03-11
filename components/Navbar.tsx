@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { robotoMono } from "@/app/fonts";
+import Image from "next/image";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -21,14 +21,16 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-black/10 bg-[#B4C7CC]">
-      <nav className="flex w-full items-center justify-between px-16 py-6">
+      <nav className="flex w-full items-center justify-between pl-0 pr-16 h-16 overflow-hidden">
         {/* inset-inline-start: name/brand */}
-        <Link href="/" className="leading-tight">
-          <div
-            className={`${robotoMono.className} text-2xl font-bold tracking-wide text-[#3A5A40]`}
-          >
-            <div>BRENDA</div>
-          </div>
+        <Link href="/" className="leading-tight overflow-hidden">
+          <Image
+            src="/logos/personal_logo.png"
+            alt="Brenda's Logo"
+            width={170}
+            height={40}
+            className="object-contain"
+          />
         </Link>
         {/* Right: links */}
         <div className="flex items-center gap-10 text-xl">
